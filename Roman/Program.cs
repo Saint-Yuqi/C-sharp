@@ -5,7 +5,7 @@ namespace Roman
 {
     class Solution
     {
-        public int RomanToInt(string s)
+        static int RomanToInt(string s)
         {
             Dictionary<char, int> r = new Dictionary<char, int>();
 	        r.Add('I',1);
@@ -37,8 +37,6 @@ namespace Roman
         }
         static void Main(string[] args)
         {
-            var s = new Solution(); //if I don't add this it will appear error CSO120.  
-            //Another way to fix this error is to change "public int RomanToInt(string s)"  to  privitate static int RomanToInt(string s)" . 
             string s = Console.ReadLine();
             int x = RomanToInt(s);
             Console.WriteLine(x);
